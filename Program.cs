@@ -65,6 +65,23 @@
             public decimal EstimatedCost {
                 get { return DeliveryFee + (decimal)(Weight * 5); }
             }
+            public Shipment(string trackingCode)
+            {
+                this.trackingCode = trackingCode==null ? "unknown" : trackingCode;
+
+                description = "unknown";
+                weight = 1;
+                deliveryFee = 50;
+                Destination = new DeliveryAddress("Cairo", "Unknown Street", 0);
+            }
+            public Shipment(string trackingCode,string description,double weight,decimal deliveryFee,DeliveryAddress destination)
+            {
+                this.trackingCode = trackingCode == null ? "Unknown": trackingCode;
+                this.description = description == null ? "Unknown" : description;
+                this.weight = weight > 0 ? weight : 1;
+                this.deliveryFee = deliveryFee > 0 ? deliveryFee : 50;
+                Destination = destination;
+            }
 
         }
 
