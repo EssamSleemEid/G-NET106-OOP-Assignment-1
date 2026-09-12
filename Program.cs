@@ -41,6 +41,12 @@
             //2-all field are public which mean that anyone can modify them
             //3-no validation for the delivery address
             #endregion
+
+            #region Question2B
+            //b)b) How can private fields and public properties improve this design?
+
+            //its allow us to control the data what we want to see and what that we don't and modify and add validation when we need
+            #endregion
         }
     }
 }
