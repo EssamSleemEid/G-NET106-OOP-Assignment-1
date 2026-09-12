@@ -4,12 +4,21 @@
     {
         public struct DeliveryAddress
         {
-            public string City; public string Street;
+            public string City;
+            public string Street;
+
         }
 
         public class Customer
         {
             public string Name;
+        }
+
+        public struct Shipment
+        {
+            public string Description;
+            public double Weight;
+            public decimal DeliveryFee;
         }
 
         static void Main(string[] args)
@@ -25,6 +34,13 @@
             //the customer is class so when the copy modified it will make change in the other variable 
             #endregion
 
+            #region Question2A
+            //a)a) Identify at least three problems with this design from an encapsulation perspective.
+
+            //1-the design does not follow proper encapsulation
+            //2-all field are public which mean that anyone can modify them
+            //3-no validation for the delivery address
+            #endregion
         }
     }
 }
