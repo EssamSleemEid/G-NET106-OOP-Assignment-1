@@ -133,6 +133,105 @@
 
             #region Part2
 
+            Console.WriteLine("Enter Shipment 1 Data");
+
+            Console.WriteLine("trackingCode: ");
+            string trackingCode1 = Console.ReadLine();
+
+            Console.WriteLine("description: ");
+            string description1 = Console.ReadLine();
+
+            Console.WriteLine("weight: ");
+            double weight1 =double.Parse(Console.ReadLine());
+
+            Console.WriteLine("deliveryFee: ");
+            decimal deliveryFee1 = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("city: ");
+            string city1 = Console.ReadLine();
+
+            Console.WriteLine("street: ");
+            string street1 = Console.ReadLine();
+
+            Console.WriteLine("bulding number: ");
+            int buldingnumber1 = int.Parse(Console.ReadLine());
+
+            DeliveryAddress address1 = new DeliveryAddress(city1, street1, buldingnumber1);
+
+            Shipment shipment1 = new Shipment(trackingCode1, description1, weight1, deliveryFee1, address1);
+
+            Console.WriteLine("Enter Shipment 2 Data");
+
+            Console.WriteLine("trackingCode: ");
+            string trackingCode2 = Console.ReadLine();
+
+            Console.WriteLine("description: ");
+            string description2 = Console.ReadLine();
+
+            Console.WriteLine("weight: ");
+            double weight2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("deliveryFee: ");
+            decimal deliveryFee2 = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("city: ");
+            string city2 = Console.ReadLine();
+
+            Console.WriteLine("street: ");
+            string street2 = Console.ReadLine();
+
+            Console.WriteLine("bulding number: ");
+            int buldingnumber2 = int.Parse(Console.ReadLine());
+
+            DeliveryAddress address2 = new DeliveryAddress(city2, street2, buldingnumber2);
+
+            Shipment shipment2 = new Shipment(trackingCode2, description2, weight2, deliveryFee2, address2);
+
+            Console.WriteLine("Enter Shipment 3 Data");
+
+            Console.WriteLine("trackingCode: ");
+            string trackingCode3 = Console.ReadLine();
+
+            Console.WriteLine("description: ");
+            string description3 = Console.ReadLine();
+
+            Console.WriteLine("weight: ");
+            double weight3 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("deliveryFee: ");
+            decimal deliveryFee3 = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("city: ");
+            string city3 = Console.ReadLine();
+
+            Console.WriteLine("street: ");
+            string street3 = Console.ReadLine();
+
+            Console.WriteLine("bulding number: ");
+            int buldingnumber3 = int.Parse(Console.ReadLine());
+
+            DeliveryAddress address3 = new DeliveryAddress(city3, street3, buldingnumber3);
+
+            Shipment shipment3 = new Shipment(trackingCode3, description3, weight3, deliveryFee3, address3);
+
+            Console.WriteLine("shipment 1");
+            shipment1.PrintShipment();
+
+            Console.WriteLine("shipment 2");
+            shipment2.PrintShipment();
+
+            Console.WriteLine("shipment 3");
+            shipment3.PrintShipment();
+
+            DeliveryAddress original = new DeliveryAddress("north sinai", "el qahira bank street", 12);
+
+            DeliveryAddress copy = original;
+
+            copy.Street = "el masaeed street";
+            copy.BuldingNumber = 11;
+
+            Console.WriteLine("original full address : " + original.GetFullAddress());
+            Console.WriteLine("copy full address : " + original.GetFullAddress());
             #endregion
         }
     }
