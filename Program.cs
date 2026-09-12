@@ -6,7 +6,17 @@
         {
             public string City;
             public string Street;
-
+            public int BuldingNumber;
+            public DeliveryAddress(string city, string street, int buldingNumber)
+            {
+                City=city;
+                Street=street;
+                BuldingNumber=buldingNumber;
+            }
+            public string GetFullAddress()
+            {
+                return $"bulding number : {BuldingNumber}, street : {Street}, city : {City}";
+            }
         }
 
         public class Customer
@@ -23,6 +33,8 @@
 
         static void Main(string[] args)
         {
+            #region Part1
+
             #region Question1A
             //a)What happens when a DeliveryAddress variable is copied into another variable and the copy is modified?
 
@@ -46,6 +58,12 @@
             //b)b) How can private fields and public properties improve this design?
 
             //its allow us to control the data what we want to see and what that we don't and modify and add validation when we need
+            #endregion
+
+            #endregion
+
+            #region Part2
+
             #endregion
         }
     }
