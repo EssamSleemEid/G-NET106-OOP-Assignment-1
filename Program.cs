@@ -26,9 +26,46 @@
 
         public struct Shipment
         {
-            public string Description;
-            public double Weight;
-            public decimal DeliveryFee;
+            private string description;
+            private double weight;
+            private decimal deliveryFee;
+            private string trackingCode;
+            public DeliveryAddress Destination {  get; set; }
+            public string TrackingCode {
+                get { return trackingCode; }
+            }
+            public string Description { 
+                get { return description;}
+
+                set {
+                    if (value!=null){
+                        description = value;} 
+                }
+            }
+            public double Weight
+            {
+                get { return weight; }
+
+                set {
+                    if(value > 0){
+                        weight = value;
+                    }
+                }
+            }
+            public decimal DeliveryFee
+            {
+                get{ return deliveryFee; }
+
+                set {
+
+                    if (value > 0) { 
+                        deliveryFee = value; }
+                }
+            }
+            public decimal EstimatedCost {
+                get { return DeliveryFee + (decimal)(Weight * 5); }
+            }
+
         }
 
         static void Main(string[] args)
