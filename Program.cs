@@ -82,7 +82,22 @@
                 this.deliveryFee = deliveryFee > 0 ? deliveryFee : 50;
                 Destination = destination;
             }
-
+            public void UpdateDeliveryFee(decimal newFee)
+            {
+                if (newFee > 0)
+                {
+                    deliveryFee = newFee;
+                }
+            }
+            public void PrintShipment()
+            {
+                Console.WriteLine("trackingCode : "+ TrackingCode);
+                Console.WriteLine("description : " + Description);
+                Console.WriteLine("weight : " + Weight+" kg");
+                Console.WriteLine("deliveryFee : " + DeliveryFee);
+                Console.WriteLine("Destination : " + Destination.GetFullAddress());
+                Console.WriteLine("estimatedCost : " + EstimatedCost+" egy");
+            }
         }
 
         static void Main(string[] args)
